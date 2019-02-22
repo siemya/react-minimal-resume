@@ -1,0 +1,254 @@
+@font-face {
+  font-family: universLight;
+  src: url("./Fonts/univers-light.ttf");
+}
+
+@font-face {
+  font-family: universBold;
+  src: url("./Fonts/univers-bold.ttf");
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.light-p {
+  margin: 0;
+  font-family: universLight;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+}
+
+.bold-p {
+  margin: 0;
+  font-family: universBold;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 58px;
+}
+
+.firmExperienceWrapper {
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 23px;
+}
+
+.period {
+  font-size: 20px;
+  color: gray;
+}
+
+.project-image {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.outer-image {
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.outer-image img {
+  height: 350px;
+  display: block;
+}
+
+.outer-image:before,
+.outer-image:after {
+  background: transparent;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: inherit;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.outer-image:after {
+  content: attr(data-content);
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: white;
+  width: 1em;
+  height: 1em;
+}
+
+.outer-image:hover:before {
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.outer-image:hover:after {
+  opacity: 1;
+}
+
+.personal-project {
+  margin-left: 30px;
+}
+
+.plus {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.tech-label {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0px 15px 0px 15px;
+  line-height: 35px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.desc-label {
+  padding: 4px 15px 2px 15px;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  max-width: 650px;
+}
+
+.navbar {
+  position: fixed !important;
+  display: flex;
+  left: 0;
+  right: 0;
+  min-height: 55px;
+  z-index: 1000;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logo {
+  font-family: SabonLTPro-Roman;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.link {
+  font-size: 19px;
+}
+
+.link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.nav-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.zoom-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.footer {
+  min-height: 70%;
+  min-height: -webkit-calc(100% - 50px);
+  min-height: -moz-calc(100% - 50px);
+  min-height: calc(100% - 50px);
+}
+
+.about-wrapper {
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.about {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.circle {
+  color: rgba(0, 0, 0, 0.8);
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-table;
+  border-radius: 8px;
+  top: -2px;
+  position: relative;
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .logo {
+    font-size: 18px !important;
+  }
+
+  img {
+    max-width: 300px !important;
+    max-height: 300px !important;
+    height: auto !important;
+  }
+
+  .wrapper {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .about {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}

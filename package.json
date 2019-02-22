@@ -1,0 +1,20 @@
+{
+  "name": "react-minimal-resume",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-collapsible": "^2.0.4",
+    "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-images": "^0.5.16",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && cd build && find . -name \"*.js.map\" -exec rm {} \\;",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
