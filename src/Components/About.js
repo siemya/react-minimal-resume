@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import about from "../Config/about";
 import theme from "../Config/theme";
 
 class About extends Component {
@@ -8,9 +9,6 @@ class About extends Component {
   }
 
   render() {
-    const about = "ABOUT ME ";
-    const mail = "me@mail.com";
-    const profileImageName = "me.png";
     return (
       <div>
         <div style={{ marginTop: 100 }}>
@@ -22,8 +20,7 @@ class About extends Component {
               backgroundSize: "cover",
               borderRadius: 100,
               margin: "auto",
-              backgroundImage:
-                "url(" + require("../Images/" + profileImageName) + ")"
+              backgroundImage: "url(" + require("../Images/me.png") + ")"
             }}
           />
         </div>
@@ -32,10 +29,13 @@ class About extends Component {
           style={{ textAlign: "center", marginTop: 20, marginBottom: 100 }}
         >
           <p className="light-p" style={{ fontSize: 30, lineHeight: "50px" }}>
-            {about}
+            {about.description}
             <span>
-              <a href={"mailto:" + mail} style={{ color: theme.themeColor }}>
-                {mail}
+              <a
+                href={"mailto:" + about.mail}
+                style={{ color: theme.themeColor }}
+              >
+                {about.mail}
               </a>
             </span>
           </p>

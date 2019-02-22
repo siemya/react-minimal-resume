@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Experience from "./Experience";
 import About from "./About";
 import theme from "../Config/theme";
+import aboutConfig from "../Config/about";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -17,7 +18,6 @@ class App extends Component {
 
   render() {
     let { page = "home" } = this.state;
-    const navbarName = "NAME SURNAME";
     return (
       <Router>
         <div>
@@ -31,7 +31,7 @@ class App extends Component {
                   }}
                   className="light-p logo"
                 >
-                  {navbarName}
+                  {aboutConfig.name}
                 </span>
               </div>
               <div style={{ display: "flex", flexDirection: "row" }}>
